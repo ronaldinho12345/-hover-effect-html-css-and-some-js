@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this app has been programm by taha</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      body {
+        background: #140019;
+      }
+
+      .container {
+        width: 600px;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin: auto;
+      }
+
+      .product {
+        width: 440px;
+        height: 550px;
+        background: #ccc;
+        perspective: 1000px;
+      }
+
+      .product_inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: 1s;
+        transform: rotateY(135deg);
+      }
+
+      .product_front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        transform: translateZ(25px);
+      }
+
+      .product_top {
+        height: 50%;
+        width: 100%;
+        background: linear-gradient(#0794a6, #9bae07);
+        color: #fff;
+      }
+
+      .product_top h1 {
+        font-size: 130px;
+        font-style: italic;
+        margin-left: 20px;
+        opacity: 0.3;
+      }
+
+      .product_bottom {
+        padding: 50px 30px;
+        font-size: 12px;
+      }
+
+      .product_bottom p {
+        font-size: 12px;
+      }
+
+      .product_bottom h2 {
+        margin-bottom: 35px;
+        color: #008394;
+        letter-spacing: 1px;
+      }
+
+      .product_bottom h1 {
+        font-style: 40px;
+        font-weight: 400;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      .product_bottom h1 span {
+        color: #008394;
+      }
+
+      .product_bottom button {
+        padding: 9px 25px;
+        background: transparent;
+        color: #008394;
+        border: 1px solid #008394;
+        border-radius: 30px;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .color_select {
+        display: flex;
+        float: right;
+        margin-top: -10px;
+      }
+
+      .select_items {
+        width: 35px;
+        height: 35px;
+        margin: 0px 10px;
+        padding: 5px;
+        box-shadow: -5px 0px 8px 2px rgba(156, 216, 244, 0.5);
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .select_items img {
+        width: 80%;
+        padding-top: 10%;
+      }
+
+      .select_items:hover {
+        background: rgba(156, 216, 244, 0.5);
+        transition: 0.5s;
+        box-shadow: none;
+      }
+      .product-top2 {
+        background: linear-gradient(#c370fd, #3be1b8);
+      }
+      .product_back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #fff;
+        transform: rotate(180deg), rotateZ(-25px);
+      }
+      .left_sideright_side {
+        width: 50px;
+        height: 100%;
+
+        background: #fff;
+        transform: rotateY(90deg);
+        position: absolute;
+        top: 0;
+        left: -25px;
+      }
+      .right_side {
+        transform: rotateY(-98deg);
+        left: auto;
+        right: -25px;}
+        #frontimg{
+            width:340px ;
+            top:70px ;
+            left:20px ;
+            position: absolute;
+            transform: translateZ(50px);
+            transition: none;
+            z-index: 100;
+        }
+        #backimg{
+            width: 340px;
+            left: -650px;
+            top:70px ;
+            transform: translateZ(50px);
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="product">
+          <img src="Downloads/images/shoes.png" id="frontimg">
+          <img src="Downloads/images/shoes2.png" id="backimg">
+        <div class="product_inner" id="taha1">
+          <div class="product_top">
+            <div class="product_back">
+              <h1>Nike</h1>
+              <div class="product_top1 product-top2"></div>
+            </div>
+          </div>
+          <div class="product_bottom">
+            <p>nike running choes</p>
+            <h2>Air zoom flo</h2>
+            <h1>125 <span>$</span></h1>
+            <button type="button">Add to bag</button>
+            <div class="color_select">
+              <div class="select_items">
+                <img src="taha.png" alt="taha.png" onclick="taha()" />
+              </div>
+              <div class="select_items"></div>
+              <img src="taha1.png" alt="taha1.png" onclick="taha8()" />
+            </div>
+          </div>
+          <div class="product_front"></div>
+          <div class="product_back"></div>
+          <div class="left_side"></div>
+          <div class="right_side"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+      var taha1 = document.getElementById("taha1")
+      var frontimg = document.getElementById("frontimg")
+      var backimg = document.getElementById("backimg")
+      function taha(){
+         taha1.style.transform="rotateY(180deg)"
+      }
+      function taha8(){
+          taha8.style.transform="rotate(300deg)"
+      }
+  </script>
+</html>
